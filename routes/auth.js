@@ -71,7 +71,7 @@ router.post("/delete", async (req, res) => {
 
 router.post("/getUserbyEmail", async (req, res) => {
   
-  const {email}= JSON.parse(req.body) ;
+  const {email}= req.body ;
 
     const response = await userController.obtenerUsuario(email);
   res.send(response);
